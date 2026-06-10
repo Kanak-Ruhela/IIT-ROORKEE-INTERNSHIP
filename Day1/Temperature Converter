@@ -1,1 +1,8 @@
-
+#Celcius to Faharenheit
+C=float(input('enter the temperature in celcius:-'))
+F=float(9/5*C+32)
+print('Temperature in Faharenheit',F)
+#Faharenheit to Calcius
+F=float(input('Enter the temperature in Faharenheit:-'))
+C=float(5/9*(F-32))
+print('Temperature in Celcius=',C)
