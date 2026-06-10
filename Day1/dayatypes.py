@@ -1,1 +1,36 @@
-
+#string
+x='Hello World'
+print(x)
+print(type(x))
+#Integer
+y=5
+print(y)
+print(type(y))
+#boolean
+z=True
+print(z)
+print(type(z))
+#complex
+a=2+5j
+print(a)
+print(type(a))
+#float
+b=4.5
+print(b)
+print(type(b))
+#list
+c=[1,2,3,4,5]
+print(c)
+print(type(c))
+#tuple
+d=(1,2,3,4,5)
+print(d)
+print(type(d))
+#dictionary
+e={'Name': 'Kanak','Age':'20','gender':'Female'}
+print(e)
+print(type(e))
+#sets
+f={4,7,2,5,8}
+print(f)
+print(type(f))
