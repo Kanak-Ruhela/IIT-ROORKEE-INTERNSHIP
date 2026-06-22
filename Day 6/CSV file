@@ -1,1 +1,19 @@
+import csv
+headers = ["Name", "Age", "Grade"]
+student_data = [
+    ["Alice", "15", "A"],
+    ["Bob", "16", "B"],
+    ["Charlie", "15", "A+"]
+]
+with open("students.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(headers)
+    writer.writerows(student_data)
+print("Data successfully written to students.csv!\n")
+print("Reading data back from the file:")
+with open("students.csv", "r") as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+
 
