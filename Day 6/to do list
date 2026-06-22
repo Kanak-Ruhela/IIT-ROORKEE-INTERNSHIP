@@ -1,1 +1,37 @@
+file_name = "todo.txt"
+tasks = []
+try:
+    with open(file_name, "r") as file:
+        for line in file:
+            tasks.append(line.strip())
+except FileNotFoundError:
+    pass
+while True:
+    print("\n--- TO-DO LIST ---")
+    if len(tasks) == 0:
+        print("(No tasks yet)")
+    else:
+        for i in range(len(tasks)):
+            print(f"{i + 1}. {tasks[i]}")
+    print("\nOptions: add, delete, exit")
+    choice = input("What want to do? ").lower().strip()
+    if choice == "add":
+        new_task = input("Enter new task: ")
+        tasks.append(new_task)
+        with open(file_name, "w") as file:
+            for task in tasks:
+                file.write(task + "\n")
+        print("Task added!")
+    elif choice == "delete":
+        num = int(input("Enter number to delete: "))
+        tasks.pop(num - 1)
+        with open(file_name, "w") as file:
+            for task in tasks:
+                file.write(task + "\n")
+        print("Task deleted!")
+    elif choice == "exit":
+        print("Goodbye!")
+        break
+    else:
+        print("Invalid choice, try again.")
 
