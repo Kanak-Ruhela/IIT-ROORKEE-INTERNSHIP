@@ -1,1 +1,12 @@
-
+import pandas as pd
+from sklearn.datasets import load_iris
+iris = load_iris()
+df = pd.DataFrame(iris.data, columns=iris.feature_names)
+df['species'] = iris.target_names[iris.target]
+# How many rows and columns?
+print(df.shape)
+print(df.describe())
+# How many flowers of each species?
+print(df['species'].value_counts())
+# Preview the dataset
+print(df.head())
